@@ -242,7 +242,7 @@ class TELayerNormColumnParallelLinear(te.pytorch.LayerNormLinear):
             if get_cuda_rng_tracker().is_initialized()
             else None,
             init_method=condition_init_method(config, init_method),
-            bias=bias,
+            bias=True,
             return_bias=self.te_return_bias,
             parallel_mode="column",
             return_layernorm_output=False,

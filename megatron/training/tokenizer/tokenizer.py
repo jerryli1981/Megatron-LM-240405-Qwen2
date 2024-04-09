@@ -468,6 +468,10 @@ class _Llama2Tokenizer(_SentencePieceTokenizer):
         return self.tokenizer.decode_ids(ids)
 
     @property
+    def vocab_size(self):
+        return 151936
+
+    @property
     def cls(self):
         return -1
 
@@ -481,7 +485,8 @@ class _Llama2Tokenizer(_SentencePieceTokenizer):
 
     @property
     def eod(self):
-        return self.eos_id
+        #return self.eos_id
+        return 151643
 
     @property
     def additional_special_tokens_ids(self):
